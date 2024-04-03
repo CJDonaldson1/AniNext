@@ -234,7 +234,121 @@ const main = async () => {
         "studio": "Gekkou",
         "image": "https://m.media-amazon.com/images/M/MV5BZjg0NDQ4M2UtZDY3Ni00MWExLTk3YzgtNTU0YWJlNjhjNDM2XkEyXkFqcGdeQXVyNjA5MDIyMzU@._V1_.jpg"
     },
-    
+    {
+        "title": "Kami wa Game ni Ueteiru.",
+        "synopsis": "The supreme Gods who had too much free time created the ultimate brain games \"Play of the Gods.\" Former Goddess Leche awoke from a long slumber and declared to the world, \"Bring forth the person who is the best in games in this era!\" Fay is nominated to represent humanity as the \"best rookie in recent years.\"\r \r The \"Game of the Gods\" that is about to begin between the two may be a little too difficult, as there has yet to be a victor throughout human history, because Gods are capricious, very unreasonable, and sometimes completely incomprehensible. However, given the nature of the games, it would be a waste not to have a good time and play with all of one's heart! The ultimate brain battles of a genius gamer boy, a former Goddess, and friends begin!\r \r (Source: MAL News)",
+        "airingDate": "Apr 1, 2024",
+        "genres": [
+            "Fantasy",
+            "Suspense",
+            "Ecchi"
+        ],
+        "studio": "LIDENFILMS",
+        "image": "https://cdn.myanimelist.net/images/anime/1578/141782.jpg"
+    },
+    {
+        "title": "Yozakura-san Chi no Daisakusen",
+        "synopsis": "High school student Taiyou Asano has been socially inept ever since his family died in a car crash. The only person he can properly interact with is his childhood friend, Mutsumi Yozakura—the head of the world's strongest family of spies. Mutsumi's eldest brother, Kyouichirou Yozakura, has been overprotective of her ever since he once rendered her severely injured. His love for Mutsumi is lethal, and Taiyou is his next target. To survive, Taiyou must marry Mutsumi and become a member of the Yozakura family. Thrown headfirst into chaos, Taiyou begins his journey to become a powerful spy in order to protect his wife and uncover the dark secrets of his past and the Yozakura family.\r \r [Written by MAL Rewrite]",
+        "airingDate": "Apr 7, 2024",
+        "genres": [
+            "Action",
+            "Comedy"
+        ],
+        "studio": "SILVER LINK.",
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/73/Mission_Yozakura_Family_vol1.jpg"
+    },
+    {
+        "title": "Bartender: Kami no Glass",
+        "synopsis": "Hidden in the backstreets of the Ginza district is Eden Hall, a lone bar operated by Ryuu Sasakura, the prodigy bartender who is said to mix the most incredible cocktails anyone has ever tasted. However, not just anyone can find Eden Hall; rather, it is Eden Hall that must find you. Customers of varying backgrounds, each plagued with their own troubles, wander into this bar. Nevertheless, Ryuu always knows the ideal cocktail to console and guide each distraught soul.\r \r [Written by MAL Rewrite]",
+        "airingDate": "Apr 4, 2024",
+        "genres": [
+            "Drama",
+            "Gourmet"
+        ],
+        "studio": "Liber",
+        "image": "https://m.media-amazon.com/images/M/MV5BY2U5ZGIwYWEtMjA2NC00Y2FlLWI1N2ItNGZlMDZiYWM4ZmNiXkEyXkFqcGdeQXVyNjA5MDIyMzU@._V1_.jpg"
+    },
+    {
+        "title": "Maou no Ore ga Dorei Elf wo Yome ni Shitanda ga, Dou Medereba Ii?",
+        "synopsis": "When the sorcerer Zagan decides to participate in an auction selling the goods of the now dead Archdemon Marchosias, he expects to find items of untold power. What he finds instead is a rare white-haired slave elf named Nephilia, and he immediately spends all his money to purchase her, much to the bewilderment of those around him. However, the secret reason behind Zagan's investment was that he had actually fallen in love with her at first sight.\r \r Unfortunately, Zagan has a problem: he is socially inept and has no idea how to express his true feelings, leading to many misunderstandings between him and his new companion. But slowly, the two begin to understand each other, and love begins to bloom.\r \r [Written by MAL Rewrite]",
+        "airingDate": "Apr 5, 2024",
+        "genres": [
+            "Action",
+            "Fantasy",
+            "Romance"
+        ],
+        "studio": "Brain's Base",
+        "image": "https://cdn.myanimelist.net/images/anime/1346/141203.jpg"
+    },
+    {
+        "title": "Lv2 kara Cheat datta Motoyuusha Kouho no Mattari Isekai Life",
+        "synopsis": "The Magical Kingdom of Klyrode summons hundreds of heroes from other worlds every year to fight in their war against the Dark One and his army of powerful demons. Banaza is one of those heroes, summoned from the Royal Capital Paluma, but something's not right—Banaza is only an average merchant. He has no magic, no fighting ability, and his stats are abysmal. Worse, a mishap leaves him unable to return home! Rejected as a hero and stranded in another world, abandoned to the far reaches of the kingdom by a cruel king who just wants him gone, Banaza's fate looks pretty bleak. But what will happen once the failed hero candidate finds himself with super cheat powers once he hits level two?\r \r (Source: J-Novel Club)",
+        "airingDate": "Apr 8, 2024",
+        "genres": [
+            "Adventure",
+            "Fantasy",
+            "Romance"
+        ],
+        "studio": "J.C.Staff",
+        "image": "https://jpbookstore.com/cdn/shop/products/91bLYbwJSDL._SL1500.jpg?v=1698661358"
+    },
+    {
+        "title": "Re:Monster",
+        "synopsis": "Tomokui Kanata has been re-incarnated in the weakest goblin, named Goburou, after having undergone an unfortunate death. However Goburou has retained his previous life's memories, an unusual evolution, as well as becoming strong enough to gain status boosts from eating.\r \r In this alternate world of survival of the fittest, events unfold with competent subordinates and comrades, delightful case of the tail-wagging dog...",
+        "airingDate": "Apr 2, 2024",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+        ],
+        "studio": "Studio Deen",
+        "image": "https://a.storyblok.com/f/178900/960x1440/a28c620f13/re-monster-key-visual.png/m/filters:quality(95)format(webp)"
+    },
+    {
+        "title": "Tensei Kizoku, Kantei Skill de Nariagaru",
+        "synopsis": "An ordinary salaryman dies one day and is reborn as Ars Louvent, the son of a noble. Although he isn't talented in magic or swordplay, he does have one skill that no one else possesses: Appraisal. Using this ability, Ars can determine a person's current strength, how much potential they hold, and where their talents rest.\r \r This skill is especially useful in the present situation of the country. The government is corrupt, revolts occur more often than not, and nobles far and wide are strengthening their fortifications in preparation for an all-out war. With this in mind, Ars realizes he too must prepare by gathering talented people.\r \r A persecuted foreigner unparalleled with the sword, a slave with an unknown talent for magic, and a timid boy with an unquenchable thirst for knowledge—such talents lend Ars their support as he aims to create the most powerful territory.\r \r [Written by MAL Rewrite]",
+        "airingDate": "Apr 7, 2024",
+        "genres": [
+            "Adventure",
+            "Fantasy"
+        ],
+        "studio": "studio MOTHER",
+        "image": "https://cdn.myanimelist.net/images/anime/1763/139538.jpg"
+    },
+    {
+        "title": "Dekisokonai to Yobareta Motoeiyuu wa Jikka kara Tsuihou sareta node Sukikatte ni Ikiru Koto ni Shita",
+        "synopsis": "A boy named Allen was unable to receive the gift of God's bounty, and called a failure. But his true identity was a former hero with memories and powers of his previous life!? Fortunate to have been expelled from his duke's family, Allen was trying to start a free-spirited journey, but he encountered an assassination attempt by a former fiancée...!? An unwanted heroic saga begins for the former hero who wants to relax in this world!\r \r (Source: TO Books, translated)",
+        "airingDate": "Apr 2, 2024",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+        ],
+        "studio": "Marvy Jack",
+        "image": "https://cdn.myanimelist.net/images/anime/1158/141710.jpg"
+    },
+    {
+        "title": "Shinigami Bocchan to Kuro Maid 3rd Season",
+        "synopsis": "Third season of Shinigami Bocchan to Kuro Maid",
+        "airingDate": "Apr 7, 2024",
+        "genres": [
+            "Comedy",
+            "Supernatural"
+        ],
+        "studio": "J.C.Staff",
+        "image": "https://cdn.animenewsnetwork.com/thumbnails/max600x600/cms/news.6/202765/shinigamibocchan.jpg"
+    },
+    {
+        "title": "Tadaima, Okaeri",
+        "synopsis": "Masaki Fujiyoshi is a stay-at-home spouse and parent. He has fought long and hard with feelings of being a burden to his loving husband, Hiromu, due to his status as an omega—a secondary gender, allowing one to give birth regardless of if they are male or female— and the difficulty they faced to achieve this domesticity. When their son, Hikari, was born, the family moved to an area better suited for raising children.\r \r Hikari is now nearing his second birthday, and he and his parents are forging meaningful bonds with those around them. These include the beta college student living next door, Yuuki, to whom Hikari has become rather attached; Hiromu's friend from work Matsuo; and the mysterious single dad seen wandering around the park.\r \r Despite their newfound domestic bliss, the family's ties to their past are in tatters. There are people they left behind to pursue the creation of their happy family, and when they begin to return, Masaki and Hiromu aren't quite sure they have good intentions.\r \r [Written by MAL Rewrite]",
+        "airingDate": "Apr 9, 2024",
+        "genres": [
+            "Boys Love",
+            "Slice of Life"
+        ],
+        "studio": "Studio Deen",
+        "image": "https://a.storyblok.com/f/178900/750x1062/fafbd43783/tadaima-okaeri-key-visual.jpg/m/filters:quality(95)format(webp)"
+    }
 ]
   await Anime.insertMany(animes)
   console.log("Animes have been seeded successfully.")
