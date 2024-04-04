@@ -40,4 +40,3 @@ app.get('/api/reviews/:id', reviewController.getReviewById)
 app.post('/api/reviews', reviewController.createReview)
 app.put('/api/reviews/:id', reviewController.updateReview)
 app.delete('/api/reviews/:id', reviewController.deleteReview)
-

@@ -350,6 +350,7 @@ const main = async () => {
         "image": "https://a.storyblok.com/f/178900/750x1062/fafbd43783/tadaima-okaeri-key-visual.jpg/m/filters:quality(95)format(webp)"
     }
 ]
+    await Anime.deleteMany()
   await Anime.insertMany(animes)
   console.log("Animes have been seeded successfully.")
 }

@@ -11,10 +11,10 @@ exports.getAllReviews = async (req, res) => {
 
 exports.getReviewById = async (req, res) => {
     try {
-        const { id } = req.params
+        const { id } = req.params;
         const review = await Review.findById(id).populate('user').populate('anime')
         if (review) {
-            res.json(review);
+            res.json(review)
         } else {
             res.status(404).send('Review not found')
         }
@@ -60,3 +60,4 @@ exports.deleteReview = async (req, res) => {
         res.status(500).send(error.message)
     }
 }
+

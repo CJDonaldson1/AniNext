@@ -7,21 +7,21 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const createReviews = async () => {
     const reviewsData = [
         {
-            user: new mongoose.Types.ObjectId('660d5bf47d4a7cc1dee59187'), 
-            anime: new mongoose.Types.ObjectId('660db78c0dc16164350f03d0'), 
+            user: new mongoose.Types.ObjectId('660ea4e37ff7a564e6b4d8ff'), 
+            anime: new mongoose.Types.ObjectId('660ea4e928ae1d723c6cd45f'), 
             content: 'Absolutely fantastic series with deep characters and an engaging plot.',
             rating: 5
         },
         {
-            user: new mongoose.Types.ObjectId('660d5bf47d4a7cc1dee59188'), 
-            anime: new mongoose.Types.ObjectId('660db78c0dc16164350f03cd'), 
+            user: new mongoose.Types.ObjectId('660ea4e37ff7a564e6b4d901'), 
+            anime: new mongoose.Types.ObjectId('660ea4e928ae1d723c6cd461'), 
             content: 'Good animation and soundtracks, but the story pacing felt a bit off at times.',
             rating: 4
         }
     ]
 
-    await Review.deleteMany(); 
-    await Review.insertMany(reviewsData);
+    await Review.deleteMany()
+    await Review.insertMany(reviewsData)
     console.log('Successfully seeded reviews into the database.')
 }
 
