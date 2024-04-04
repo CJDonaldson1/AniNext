@@ -4,26 +4,26 @@ const Schema = mongoose.Schema
 const reviewSchema = new Schema({
   content: {
     type: String,
-    required: true
+    required: true,
   },
   rating: {
     type: Number,
     required: true,
-    min: 1, 
-    max: 5
+    min: 1,
+    max: 5,
   },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    required: true
+    required: true,
   },
   anime: {
     type: Schema.Types.ObjectId,
     ref: 'Anime',
-    required: true
-  }
+    required: true,
+  },
 }, {
-  timestamps: true
+  timestamps: true,
 })
 
 module.exports = mongoose.model('Review', reviewSchema)
