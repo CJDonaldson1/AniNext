@@ -1,6 +1,7 @@
+// frontend/src/components/NavBar.jsx
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import 'Navbar.css'
+import './NavBar.css'
 
 function Navbar() {
   return (
