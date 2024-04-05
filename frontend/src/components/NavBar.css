@@ -1,2 +1,105 @@
-
+.box {
+    height: 101px;
+    width: 1440px;
+  }
+  
+  .box .navbar {
+    background-color: #000000;
+    height: 101px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 2000px;
+  }
+  
+  .box .nav-bar {
+    height: 46px;
+    left: 44px;
+    position: relative;
+    top: 16px;
+    width: 1310px;
+  }
+  
+  .box .ani-next {
+    color: transparent;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 50px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 221px;
+  }
+  
+  .box .text-wrapper {
+    color: #fe0000;
+    top: -50px;
+    position: relative;
+  }
+  
+.box .span {
+    color: #ffffff;
+    font-size: 40px;
+    position: relative;
+    top: -52px;
+}
+  
+  .box .NavHomepage{
+    color: #ffffff;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 30px;
+    font-weight: 700;
+    left: 265px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 12px;
+    white-space: nowrap;
+    width: 157px;
+  }
+  
+  .box .NavUpcomingAnimes{
+    color: #ffffff;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 30px;
+    font-weight: 700;
+    left: 494px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 11px;
+    white-space: nowrap;
+    width: 267px;
+  }
+  
+  .box .NavReview {
+    color: #ffffff;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 30px;
+    font-weight: 700;
+    left: 1143px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 12px;
+    white-space: nowrap;
+    width: 157px;
+  }
+  
+  .box .NavProfile {
+    color: #ffffff;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 30px;
+    font-weight: 700;
+    left: 873px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 12px;
+    white-space: nowrap;
+    width: 97px;
+  }
   

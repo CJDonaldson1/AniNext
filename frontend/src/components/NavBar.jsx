@@ -1,19 +1,22 @@
-// frontend/src/components/NavBar.jsx
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import './NavBar.css'
+import React from "react"
+import "./NavBar.css"
 
-function Navbar() {
+export const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h1 className="navbar-title">AniNext</h1>
-      <div className="navbar-links">
-        <NavLink activeClassName="active" to="/homepage">HomePage</NavLink>
-        <NavLink activeClassName="active" to="/upcoming-animes">Upcoming Animes</NavLink>
-        <NavLink activeClassName="active" to="/profile">Profile</NavLink>
-        <NavLink activeClassName="active" to="/reviews">Reviews</NavLink>
+    <div className="box">
+      <div className="navbar">
+        <div className="nav-bar">
+          <p className="ani-next">
+            <span className="text-wrapper">A</span>
+            <span className="span">niNext</span>
+          </p>
+          <div className="NavHomepage">HomePage</div>
+          <div className="NavUpcomingAnimes">Upcoming Animes</div>
+          <div className="NavReview">Reviews</div>
+          <div className="NavProfile">Profile</div>
+        </div>
       </div>
-    </nav>
+    </div>
   )
 }
 
