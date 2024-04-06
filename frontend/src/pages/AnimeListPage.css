@@ -1,0 +1,196 @@
+.upcoming-anime-page {
+    background-color: #7bb1b1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .upcoming-anime-page .div {
+    background-color: #7bb1b1;
+    height: 1024px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .upcoming-anime-page .group {
+    height: 285px;
+    left: 27px;
+    position: absolute;
+    top: 249px;
+    width: 449px;
+  }
+  
+  .upcoming-anime-page .group-2 {
+    height: 285px;
+    position: relative;
+    width: 455px;
+  }
+  
+  .upcoming-anime-page .stars {
+    height: 25px;
+    left: 5px;
+    position: absolute;
+    top: 260px;
+    width: 152px;
+  }
+  
+  .upcoming-anime-page .image {
+    height: 216px;
+    left: 5px;
+    object-fit: cover;
+    position: absolute;
+    top: 44px;
+    width: 167px;
+  }
+  
+  .upcoming-anime-page .text-wrapper {
+    color: #000000;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 48px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 176px;
+  }
+  
+  .upcoming-anime-page .p {
+    color: #000000;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 176px;
+    letter-spacing: 0;
+    line-height: 48px;
+    position: absolute;
+    top: 31px;
+    width: 262px;
+  }
+  
+  .upcoming-anime-page .overlap {
+    height: 110px;
+    left: 176px;
+    position: absolute;
+    top: 175px;
+    width: 273px;
+  }
+  
+  .upcoming-anime-page .genre-action-isekai {
+    color: #000000;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 48px;
+    position: absolute;
+    top: 0;
+    width: 273px;
+  }
+  
+  .upcoming-anime-page .overlap-group-wrapper {
+    height: 31px;
+    left: 0;
+    position: absolute;
+    top: 79px;
+    width: 112px;
+  }
+  
+  .upcoming-anime-page .overlap-group {
+    height: 31px;
+    position: relative;
+    width: 110px;
+  }
+  
+  .upcoming-anime-page .rectangle {
+    background-color: #d9d9d9;
+    height: 25px;
+    left: 0;
+    position: absolute;
+    top: 6px;
+    width: 110px;
+  }
+  
+  .upcoming-anime-page .text-wrapper-2 {
+    color: #000000;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 11px;
+    letter-spacing: 0;
+    line-height: 48px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 89px;
+  }
+  
+  .upcoming-anime-page .group-3 {
+    height: 285px;
+    left: 496px;
+    position: absolute;
+    top: 259px;
+    width: 455px;
+  }
+  
+  .upcoming-anime-page .group-4 {
+    height: 285px;
+    left: 991px;
+    position: absolute;
+    top: 265px;
+    width: 455px;
+  }
+  
+  .upcoming-anime-page .group-5 {
+    height: 285px;
+    left: 980px;
+    position: absolute;
+    top: 580px;
+    width: 455px;
+  }
+  
+  .upcoming-anime-page .group-6 {
+    height: 285px;
+    left: 496px;
+    position: absolute;
+    top: 561px;
+    width: 455px;
+  }
+  
+  .upcoming-anime-page .group-wrapper {
+    height: 285px;
+    left: 27px;
+    position: absolute;
+    top: 561px;
+    width: 449px;
+  }
+  
+  .upcoming-anime-page .div-wrapper {
+    background: linear-gradient(180deg, rgb(252.47, 96.57, 96.57) 0%, rgb(115, 115, 115) 100%);
+    height: 163px;
+    left: 0;
+    position: absolute;
+    top: 86px;
+    width: 1440px;
+  }
+  
+  .upcoming-anime-page .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 50px;
+    font-weight: 700;
+    height: 158px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 48px;
+    position: absolute;
+    text-align: center;
+    top: 4px;
+    width: 1440px;
+  }
+  
