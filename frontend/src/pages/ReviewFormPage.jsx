@@ -1,7 +1,19 @@
 import React from "react"
 import "./ReviewFormPage.css"
-
+import axios from "axios"
 export const ReviewPage = () => {
+    useEffect(() => {
+        const fetchReviews = async () => {
+            try {
+                const { data } = await axios.get("http://localhost:3001/api/reviews");
+                fetchReviews(data);
+            } catch (error) {
+                console.error("Failed to fetch reviews:", error);
+            }
+        };
+        fetchReviews();
+    }, []);
+    
   return (
     <div className="review-page">
       <div className="div">
