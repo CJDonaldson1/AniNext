@@ -3,6 +3,7 @@ const logger = require('morgan')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const db = require('./db')
+const SmsLog = require('./models/Sms')
 
 const animeController = require('./controllers/animeController')
 const userController = require('./controllers/userController')
@@ -44,20 +45,28 @@ app.post('/api/reviews', reviewController.createReview)
 app.put('/api/reviews/:id', reviewController.updateReview)
 app.delete('/api/reviews/:id', reviewController.deleteReview)
 
-// Route for sending SMS reminders
 app.post('/api/reminders', async (req, res) => {
-  const { phoneNumber, message } = req.body
-
-  try {
-    const smsResponse = await sendSMS(phoneNumber, message)
-    if (smsResponse.success) {
-      res.status(200).json({ message: "Reminder sent successfully!", data: smsResponse })
-    } else {
-      throw new Error(smsResponse.error)
+    const { phoneNumber, message } = req.body;
+  
+    try {
+      const smsResponse = await sendSMS(phoneNumber, message);
+      if (smsResponse.success) {
+        // Save the log of the SMS being sent
+        const newSmsLog = new SmsLog({
+          to: phoneNumber,
+          message: message,
+          sid: smsResponse.sid, // Assuming `sendSMS` returns the SID on success
+          status: 'sent'
+        });
+        await newSmsLog.save();
+  
+        res.status(200).json({ message: "Reminder sent successfully!", data: smsResponse });
+      } else {
+        throw new Error(smsResponse.error);
+      }
+    } catch (error) {
+      res.status(500).json({ message: "Failed to send reminder.", error: error.message });
     }
-  } catch (error) {
-    res.status(500).json({ message: "Failed to send reminder.", error: error.message })
-  }
-})
+  });
 
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
