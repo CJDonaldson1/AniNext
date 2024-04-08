@@ -5,6 +5,8 @@ import Navbar from './components/NavBar'
 import AnimeListPage from './pages/AnimeListPage'
 import ProfilePage from './pages/UserProfilePage'
 import ReviewsPage from './pages/ReviewFormPage'
+import UserLoginPage from './pages/UserLoginPage'
+import UserSignupPage from './pages/UserSignupPage'
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
         <Route path="/anime-list" element={<AnimeListPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/login" element={<UserLoginPage />} />
+        <Route path="/signup" element={<UserSignupPage />} />
+
       </Routes>
     </Router>
   )

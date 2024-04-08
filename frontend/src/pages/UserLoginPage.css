@@ -1,0 +1,67 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Additional styles might not be necessary if the background image is applied inline in your JSX.
+If you want to adjust or add styles specific to other elements within your LoginPage, you can continue to do so here. */
+
+/* Example for .container to ensure it's properly centered */
+.login-page .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-page .input, .login-page .button {
+    margin-top: 20px;
+}
+
+.login-page .textfield, .login-page .div {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.login-page .button .primary {
+    cursor: pointer;
+    color: #200fd9;
+   
+}
+
+/* Continue to adjust CSS as necessary to match your design requirements. */
+.login-page .ani-next {
+    color: transparent;
+    font-family: "Inika-Bold", Helvetica;
+    font-size: 50px;
+    font-weight: 700;
+    left: 1069px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 724px;
+    transform: rotate(7deg);
+    white-space: nowrap;
+    width: 221px;
+  }
+  
+  .login-page .span {
+    color: #fe0000;
+  }
+  
+  .login-page .text-wrapper-2 {
+    color: #ffffff;
+    font-size: 40px;
+  }
