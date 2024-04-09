@@ -55,10 +55,10 @@ app.get('/api/reminders', async (req, res) => {
     }
 })
 app.post('/api/reminders', async (req, res) => {
-    const { phoneNumber, message } = req.body
+    const { phoneNumber, message } = req.body // Ensure 'message' is being retrieved from the body
   
     try {
-      const smsResponse = await sendSMS(phoneNumber, message)
+      const smsResponse = await sendSMS(phoneNumber, message) // Pass the message to sendSMS call
       if (smsResponse.success) {
         // Save the log of the SMS being sent
         const newSmsLog = new SmsLog({
@@ -66,7 +66,7 @@ app.post('/api/reminders', async (req, res) => {
           message: message,
           sid: smsResponse.sid,
           status: 'sent'
-        });
+        })
         await newSmsLog.save()
   
         res.status(200).json({ message: "Reminder sent successfully!", data: smsResponse })
@@ -76,6 +76,7 @@ app.post('/api/reminders', async (req, res) => {
     } catch (error) {
       res.status(500).json({ message: "Failed to send reminder.", error: error.message })
     }
-  })
+})
+
 
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))

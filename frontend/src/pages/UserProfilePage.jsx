@@ -6,21 +6,32 @@ export const ProfilePage = () => {
   const [savedAnimes, setSavedAnimes] = useState([])
   const [phoneNumber, setPhoneNumber] = useState('')
 
-  // Load saved animes from local storage
   useEffect(() => {
     const loadedAnimes = JSON.parse(localStorage.getItem("savedAnimes")) || []
     setSavedAnimes(loadedAnimes)
   }, [])
 
-  // Handle sending SMS reminders
   const handleSendReminders = async () => {
+    if (!phoneNumber) {
+      alert('Please enter your phone number.')
+      return
+    }
+    
+    // Construct a message with titles of saved animes
+    const message = savedAnimes.map(anime => anime.title).join(", ")
+    
+    if (!message) {
+      alert('There are no animes saved to send reminders for.')
+      return
+    }
+
     try {
-      await axios.post('http://localhost:3001/api/reminders', { savedAnimes, phoneNumber })
+      await axios.post('http://localhost:3001/api/reminders', { savedAnimes, phoneNumber, message })
       alert('Reminders set successfully!')
-      // Optionally clear the saved animes from localStorage
       localStorage.removeItem("savedAnimes")
       setSavedAnimes([])
     } catch (error) {
+      console.error('Failed to set reminders:', error);
       alert('Failed to set reminders. Please try again.')
     }
   }
@@ -31,7 +42,6 @@ export const ProfilePage = () => {
         <div className="group">
           <div className="section">
             <div className="container">
-              {/* Display dynamic content based on saved shows */}
               <div className="title">Recently Saved Shows</div>
               {savedAnimes.map((anime, index) => (
                 <div key={index} className="item">
@@ -44,7 +54,6 @@ export const ProfilePage = () => {
               ))}
             </div>
           </div>
-          {/* Input for phone number and button to send reminders */}
           <div className="section-2">
             <div className="overlap-2">
               <input
