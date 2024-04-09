@@ -19,7 +19,13 @@ const HomePage = () => {
     fetchAnimes()
   }, [])
   const currentAnime = animeList[currentAnimeIndex]
-
+  const saveAnime = (anime) => {
+    const savedAnimes = JSON.parse(localStorage.getItem("savedAnimes")) || []
+    if (!savedAnimes.some(savedAnime => savedAnime.title === anime.title)) {
+      savedAnimes.push(anime)
+      localStorage.setItem("savedAnimes", JSON.stringify(savedAnimes))
+    }
+  }
 
   if (!currentAnime) return <div>Loading...</div>
 
@@ -54,11 +60,11 @@ const HomePage = () => {
               </div>
             </div>
             <div className="overlap-wrapper">
-              <div className="div">
-                <div className="text-wrapper-2">Set Reminder</div>
-                <img className="zondicons-add-2" alt="Zondicons add" src="zondicons-add-outline.svg" />
+                <div className="div">
+                  <button className="text-wrapper-2" onClick={() => saveAnime(currentAnime)}>Set Reminder</button>
+                  <img className="zondicons-add-2" alt="Zondicons add" src="zondicons-add-outline.svg" />
+                </div>
               </div>
-            </div>
             <p className="new-episodes-release">New Episodes Air on {currentAnime.airingDate}</p>
             <div className="rectangle-2" />
             <img className="image" alt="Image" src={animeList[currentAnimeIndex + 1]?.image} />
