@@ -27,6 +27,7 @@ app.get('/api/users/:id', userController.getUserById)
 app.post('/api/users', userController.createUser)
 app.put('/api/users/:id', userController.updateUser)
 app.delete('/api/users/:id', userController.deleteUser)
+app.get('/api/anime/genre/:genre', animeController.getAnimeByGenre);
 
 // Login Route for User
 
@@ -77,6 +78,11 @@ app.post('/api/reminders', async (req, res) => {
       res.status(500).json({ message: "Failed to send reminder.", error: error.message })
     }
 })
+
+
+
+
+
 
 
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))

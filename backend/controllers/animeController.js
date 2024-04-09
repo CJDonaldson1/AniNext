@@ -60,3 +60,14 @@ exports.deleteAnime = async (req, res) => {
         res.status(500).send(error.message)
     }
 }
+
+exports.getAnimeByGenre = async (req, res) => {
+    const { genre } = req.params;
+    try {
+      const animes = await Anime.find({ "genres": genre });
+      res.json(animes);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Internal server error", error: error.message });
+    }
+  };
