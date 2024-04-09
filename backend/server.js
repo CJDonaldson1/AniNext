@@ -45,28 +45,37 @@ app.post('/api/reviews', reviewController.createReview)
 app.put('/api/reviews/:id', reviewController.updateReview)
 app.delete('/api/reviews/:id', reviewController.deleteReview)
 
+//this is the for the sms routes
+app.get('/api/reminders', async (req, res) => {
+    try {
+        const reminders = await Reminder.find()
+        res.status(200).json({ data: reminders })
+    } catch (error) {
+        res.status(500).json({ message: "Failed to get reminders.", error: error.message })
+    }
+})
 app.post('/api/reminders', async (req, res) => {
-    const { phoneNumber, message } = req.body;
+    const { phoneNumber, message } = req.body
   
     try {
-      const smsResponse = await sendSMS(phoneNumber, message);
+      const smsResponse = await sendSMS(phoneNumber, message)
       if (smsResponse.success) {
         // Save the log of the SMS being sent
         const newSmsLog = new SmsLog({
           to: phoneNumber,
           message: message,
-          sid: smsResponse.sid, // Assuming `sendSMS` returns the SID on success
+          sid: smsResponse.sid,
           status: 'sent'
         });
-        await newSmsLog.save();
+        await newSmsLog.save()
   
-        res.status(200).json({ message: "Reminder sent successfully!", data: smsResponse });
+        res.status(200).json({ message: "Reminder sent successfully!", data: smsResponse })
       } else {
-        throw new Error(smsResponse.error);
+        throw new Error(smsResponse.error)
       }
     } catch (error) {
-      res.status(500).json({ message: "Failed to send reminder.", error: error.message });
+      res.status(500).json({ message: "Failed to send reminder.", error: error.message })
     }
-  });
+  })
 
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))

@@ -1,112 +1,60 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import axios from "axios"
 import "./UserProfilePage.css"
 
 export const ProfilePage = () => {
+  const [savedAnimes, setSavedAnimes] = useState([])
+  const [phoneNumber, setPhoneNumber] = useState('')
+
+  // Load saved animes from local storage
+  useEffect(() => {
+    const loadedAnimes = JSON.parse(localStorage.getItem("savedAnimes")) || []
+    setSavedAnimes(loadedAnimes)
+  }, [])
+
+  // Handle sending SMS reminders
+  const handleSendReminders = async () => {
+    try {
+      await axios.post('http://localhost:3001/api/reminders', { savedAnimes, phoneNumber })
+      alert('Reminders set successfully!')
+      // Optionally clear the saved animes from localStorage
+      localStorage.removeItem("savedAnimes")
+      setSavedAnimes([])
+    } catch (error) {
+      alert('Failed to set reminders. Please try again.')
+    }
+  }
+
   return (
     <div className="profile-page">
       <div className="group-wrapper">
         <div className="group">
           <div className="section">
             <div className="container">
-              <div className="title">This is Email Account</div>
-            </div>
-            <img className="vector" alt="Vector" src="vector-200.svg" />
-          </div>
-          <div className="div">
-            <div className="overlap">
-              <div className="title-wrapper">
-                <div className="text-wrapper">Recently Saved Shows</div>
-              </div>
-            </div>
-            <div className="overlap-group">
-              <div className="list">
-                <div className="item">
-                  <img className="image" alt="Image" src="image-9-4.png" />
+              {/* Display dynamic content based on saved shows */}
+              <div className="title">Recently Saved Shows</div>
+              {savedAnimes.map((anime, index) => (
+                <div key={index} className="item">
+                  <img className="image" alt={anime.title} src={anime.image} />
                   <div className="frame">
-                    <div className="title-2">Musuh tensi</div>
-                    <p className="subtitle">Next Episode: Monday at 8 PM</p>
+                    <div className="title-2">{anime.title}</div>
+                    <p className="subtitle">Next Episode: {anime.nextEpisodeDate}</p>
                   </div>
                 </div>
-                <div className="item-2">
-                  <img className="img" alt="Image" src="image-9-5.png" />
-                  <div className="frame-2">
-                    <div className="title-2">Demon King</div>
-                    <p className="subtitle">Next Episode: Wednesday at 7 PM</p>
-                  </div>
-                </div>
-                <div className="item-3">
-                  <img className="img" alt="Image" src="image-9.png" />
-                  <div className="frame-2">
-                    <div className="title-2">Demon King</div>
-                    <p className="subtitle">Next Episode: Wednesday at 7 PM</p>
-                  </div>
-                </div>
-                <div className="item-4">
-                  <img className="img" alt="Image" src="image-9-2.png" />
-                  <div className="frame-2">
-                    <div className="title-2">Demon King</div>
-                    <p className="subtitle">Next Episode: Wednesday at 7 PM</p>
-                  </div>
-                </div>
-              </div>
-              <img className="vector-2" alt="Vector" src="image.svg" />
+              ))}
             </div>
           </div>
+          {/* Input for phone number and button to send reminders */}
           <div className="section-2">
             <div className="overlap-2">
-              <div className="overlap-3">
-                <div className="rectangle" />
-                <div className="div-wrapper">
-                  <div className="text-wrapper">Show Reminders</div>
-                </div>
-                <div className="list-2">
-                  <div className="item-5">
-                    <img className="image-2" alt="Image" src="image-6-2.png" />
-                    <div className="frame">
-                      <div className="title-2">
-                        My Hero Academia
-                        <br />
-                        Monday
-                      </div>
-                      <p className="subtitle">Show 1 airs at 8 PM</p>
-                    </div>
-                  </div>
-                  <div className="item-6">
-                    <img className="image" alt="Image" src="image-9-3.png" />
-                    <div className="frame">
-                      <div className="title-2">
-                        Kaiju 8<br />
-                        Wednesday
-                      </div>
-                      <p className="subtitle">Show 2 airs at 7 PM</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="item-7">
-                  <img className="image-2" alt="Image" src="image-6.png" />
-                  <div className="frame">
-                    <div className="title-2">
-                      My Hero Academia
-                      <br />
-                      Monday
-                    </div>
-                    <p className="subtitle">Show 1 airs at 8 PM</p>
-                  </div>
-                </div>
-              </div>
-              <div className="item-8">
-                <img className="image-2" alt="Image" src="image.png" />
-                <div className="frame">
-                  <div className="title-2">
-                    My Hero Academia
-                    <br />
-                    Monday
-                  </div>
-                  <p className="subtitle">Show 1 airs at 8 PM</p>
-                </div>
-              </div>
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+              />
+              <button onClick={handleSendReminders}>Set Reminders</button>
             </div>
-            <img className="vector-3" alt="Vector" src="vector-200-2.svg" />
           </div>
         </div>
       </div>

@@ -27,12 +27,6 @@
 }
 
 .box .rectangle {
-  background: linear-gradient(
-    180deg,
-    rgb(0, 0, 0) 0%,
-    rgba(241.46, 237.38, 237.38, 0) 76.14%,
-    rgba(255, 250.69, 250.69, 0) 100%
-  );
   height: 1000px;
   left: 0;
   position: absolute;
