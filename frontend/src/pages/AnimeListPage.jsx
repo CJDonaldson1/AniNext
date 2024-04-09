@@ -18,8 +18,16 @@ export const AnimeListPage = () => {
             }
             fetchAnimes()
         }, [])
+        const saveAnime = (anime) => {
+            const savedAnimes = JSON.parse(localStorage.getItem("savedAnimes")) || []
+            if (!savedAnimes.some(savedAnime => savedAnime.title === anime.title)) {
+                savedAnimes.push(anime);
+                localStorage.setItem("savedAnimes", JSON.stringify(savedAnimes))
+            }
+        }
         const capText = (text, maxLength) => {
-            return text.length > maxLength ? text.slice(0, maxLength - 3) + "..." : text;
+            return text.length > maxLength ? text.slice(0, maxLength - 3) + "..." : text
+            
         }
         return (
             <div className="upcoming-anime-page">
@@ -29,7 +37,7 @@ export const AnimeListPage = () => {
                         <div className="text-wrapper">{capText(anime.title, 50)}</div>
                         <p className="p">{capText(anime.synopsis, 50)}</p>
                         <div className="genre-action-isekai">{anime.genres}</div>
-                        <button className="save-button">Save to List</button>
+                        <button className="save-button" onClick={() => saveAnime(anime)}>Save to List</button>
                     </div>
                 ))}
             </div>
