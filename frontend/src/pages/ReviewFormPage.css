@@ -1,342 +1,106 @@
 .review-page {
-    background-color: rgba(255, 255, 255, 1);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .review-page .div {
-    background: linear-gradient(180deg, rgb(241.13, 159.24, 159.24) 1.49%, rgb(153, 153, 153) 100%);
-    background-color: rgba(255, 255, 255, 1);
-    height: 1024px;
-    overflow: hidden;
-    position: relative;
-    width: 1440px;
-  }
-  
-  .review-page .section {
-    height: 540px;
-    left: 20px;
-    overflow: hidden;
-    position: absolute;
-    top: 93px;
-    width: 1440px;
-  }
-  
-  .review-page .container {
-    height: 420px;
-    left: 170px;
-    position: absolute;
-    top: 60px;
-    width: 1100px;
-  }
-  
-  .review-page .title {
-    color: #000000;
-    font-family: "Roboto-Bold", Helvetica;
-    font-size: 40px;
-    font-weight: 700;
-    left: 290px;
-    letter-spacing: 0;
-    line-height: 48px;
-    position: absolute;
-    text-align: center;
-    top: -1px;
-    width: 520px;
-  }
-  
-  .review-page .description {
-    color: #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    left: 290px;
-    letter-spacing: 0;
-    line-height: 24px;
-    position: absolute;
-    text-align: center;
-    top: 71px;
-    width: 520px;
-  }
-  
-  .review-page .input {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: center;
-    left: 250px;
-    position: absolute;
-    top: 120px;
-    width: 600px;
-  }
-  
-  .review-page .text-wrapper {
-    align-self: stretch;
-    color: #000000;
-    font-family: "Roboto-Medium", Helvetica;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 20px;
-    margin-top: -1px;
-    position: relative;
-  }
-  
-  .review-page .textfield {
-    align-items: center;
-    align-self: stretch;
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #0000001a;
-    border-radius: 6px;
-    display: flex;
-    flex: 0 0 auto;
-    gap: 4px;
-    padding: 8px 12px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .review-page .text {
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    color: #00000080;
-    display: -webkit-box;
-    flex: 1;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 20px;
-    letter-spacing: 0;
-    line-height: 20px;
-    margin-top: -1px;
-    overflow: hidden;
-    position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  .review-page .input-2 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: center;
-    left: 250px;
-    position: absolute;
-    top: 204px;
-    width: 600px;
-  }
-  
-  .review-page .input-3 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: center;
-    left: 250px;
-    position: absolute;
-    top: 288px;
-    width: 600px;
-  }
-  
-  .review-page .button {
-    all: unset;
-    align-items: flex-start;
-    box-sizing: border-box;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 12px;
-    left: 470px;
-    position: absolute;
-    top: 372px;
-  }
-  
-  .review-page .primary {
-    align-items: center;
-    background-color: #000000;
-    border-radius: 8px;
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    padding: 12px;
-    position: relative;
-    width: 160px;
-  }
-  
-  .review-page .title-2 {
-    color: #ffffff;
-    font-family: "Roboto-Medium", Helvetica;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 24px;
-    margin-top: -1px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .review-page .vector {
-    height: 1px;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 540px;
-    width: 1420px;
-  }
-  
-  .review-page .section-2 {
-    height: 272px;
-    left: 57px;
-    overflow: hidden;
-    position: absolute;
-    top: 670px;
-    width: 1440px;
-  }
-  
-  .review-page .container-2 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    left: 170px;
-    position: absolute;
-    top: 88px;
-    width: 520px;
-  }
-  
-  .review-page .title-3 {
-    align-self: stretch;
-    color: #000000;
-    font-family: "Roboto-Bold", Helvetica;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 48px;
-    margin-top: -1px;
-    position: relative;
-  }
-  
-  .review-page .p {
-    align-self: stretch;
-    color: #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 24px;
-    position: relative;
-  }
-  
-  .review-page .list {
-    align-items: center;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    left: 750px;
-    position: absolute;
-    top: 60px;
-    width: 520px;
-  }
-  
-  .review-page .card {
-    align-items: center;
-    background-color: #0000000d;
-    border-radius: 6px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 16px;
-    justify-content: center;
-    overflow: hidden;
-    padding: 16px;
-    position: relative;
-  }
-  
-  .review-page .user {
-    align-items: center;
-    align-self: stretch;
-    display: flex;
-    flex: 0 0 auto;
-    gap: 4px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .review-page .avatar {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    flex-grow: 1;
-    gap: 8px;
-    position: relative;
-  }
-  
-  .review-page .avatar-2 {
-    background-color: #0000001a;
-    border-radius: 32px;
-    height: 32px;
-    position: relative;
-    width: 32px;
-  }
-  
-  .review-page .frame {
-    align-items: flex-start;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-grow: 1;
-    position: relative;
-  }
-  
-  .review-page .title-4 {
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    align-self: stretch;
-    color: #000000;
-    display: -webkit-box;
-    font-family: "Roboto-Medium", Helvetica;
-    font-size: 14px;
-    font-weight: 500;
-    height: 20px;
-    letter-spacing: 0;
-    line-height: 20px;
-    margin-top: -1px;
-    overflow: hidden;
-    position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
+  background-image: url("https://cdn.wallpapersafari.com/68/11/t9vZSU.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px; /* Added padding at the bottom for spacing */
+}
+
+
+.review-page .div,
+.review-page .section,
+.review-page .container,
+.review-page .section-2,
+.review-page .container-2 {
+  width: 80%;
+  max-width: 960px; /* Max width for better readability on larger screens */
+  margin: 0 auto;
+ /* White backgrounds for form and reviews */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  margin-bottom: 20px; /* Space between sections */
+}
+
+.review-page .title,
+.review-page .title-3 {
+  font-size: 24px; /* Larger, but not too large, for headings */
+  margin-bottom: 10px; /* Spacing after the title */
+  color: #ff0505; /* Darker text for better readability */
+  text-align: center;
+}
+
+.review-page .description,
+.review-page .p {
+  font-size: 14px; 
+  color: #48ff00; 
+  margin-bottom: 20px; 
+  text-align: center;
+}
+
+.review-page .input,
+.review-page .input-2,
+.review-page .input-3 {
+  margin-bottom: 15px; 
+}
+
+.review-page .text-wrapper label {
+  display: block; 
+  margin-bottom: 5px; 
+}
+
+.review-page .textfield,
+textarea.textfield {
+  width: 100%; /* Full-width inputs and textareas */
+  padding: 10px; 
+  border: 1px solid #a48989; 
+  border-radius: 4px; 
+}
+
+textarea.textfield {
+  height: 100px; 
+  resize: vertical;
+}
+
+.review-page .button.primary {
+  cursor: pointer; 
+  text-align: center; 
+  color: white; 
+  background-color: #007bff; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  display: block; 
+  width: fit-content;
+  margin: 20px auto 0; 
+}
+
+.review-page .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive cards */
+  gap: 20px; 
+}
+
+.review-page .card {
+  padding: 15px;
+  border: 1px solid #ffffff; 
+}
+
+
+  .review-page .title-4,
   .review-page .title-5 {
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    align-self: stretch;
-    color: #000000;
-    display: -webkit-box;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    height: 72px;
-    letter-spacing: 0;
-    line-height: 24px;
-    overflow: hidden;
-    position: relative;
-    text-overflow: ellipsis;
+    margin: 10px 0; 
+    color : #04ff00;
+    font-weight: bold; 
   }
-  
-  .review-page .img {
-    height: 1px;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 272px;
-    width: 1383px;
-  }
-  
+
+.review-page .avatar-2 {
+  background-color: #84a2c2; 
+}
+
   

@@ -7,7 +7,7 @@ import ProfilePage from './pages/UserProfilePage'
 import ReviewsPage from './pages/ReviewFormPage'
 import UserLoginPage from './pages/UserLoginPage'
 import UserSignupPage from './pages/UserSignupPage'
-import Chatbot from '../Chatbot/config'
+// import Chatbot from '../Chatbot/config'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route path="/login" element={<UserLoginPage />} />
         <Route path="/signup" element={<UserSignupPage />} />
       </Routes>
-      <Chatbot /> 
+      {/* <Chatbot />  */}
     </Router>
   )
 }
