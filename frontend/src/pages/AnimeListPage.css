@@ -1,83 +1,43 @@
 .upcoming-anime-page {
     background-color: #7bb1b1;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    padding: 20px;
-}
-
-
-
-.box .image {
-    height: 216px;
-    left: 5px;
-    object-fit: cover;
-    position: absolute;
-    top: 10px; /* Adjusted for internal padding */
-    width: 167px;
-}
-
-.box .text-wrapper {
-    color: #000000;
-    font-family: "Inika-Bold", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 180px; /* Adjust for text positioning */
-    letter-spacing: 0;
-    line-height: 24px; /* Adjusted for text capping effect */
-    position: absolute;
-    top: 10px;
-    white-space: normal; /* Allows text wrapping */
-    width: 260px; /* Adjusted to fit the new layout */
-}
-
-.box .p {
-    color: #000000;
-    font-family: "Inika-Bold", Helvetica;
-    font-size: 15px; /* Adjusted for uniformity */
-    font-weight: 700;
-    left: 180px;
-    letter-spacing: 0;
-    line-height: 20px; /* Adjusted for a compact look */
-    position: absolute;
-    top: 60px;
-    width: 260px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Limits to 3 lines */
-}
-
-.box .genre-action-isekai {
-    color: #000000;
-    font-family: "Inika-Bold", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 180px;
-    letter-spacing: 0;
-    line-height: 24px;
-    position: absolute;
-    top: 160px;
-    width: 260px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Limits to 3 lines */
-    white-space: normal; /* Allows text wrapping */
-}
-
-.box .overlap-group-wrapper {
-    display: none; /* Hide if not needed */
-}
-
-.box .overlap-group {
-    display: none; /* Hide if not needed */
-}
-.box .save-button {
-    position: absolute;
-    bottom: 10px;
-    left: 180px;
-}
+    justify-content: space-around; /* Ensures cards are spaced nicely */
+    gap: 20px; /* Adds space between the cards */
+  }
+  
+  /* Style adjustments for individual anime cards */
+  .upcoming-anime-page .box {
+    background-color: #ffffff; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for a card-like appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    overflow: hidden; /* Ensures nothing spills outside the card */
+    width: 30%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+  }
+  
+  .upcoming-anime-page .image {
+    width: 100%; 
+    max-height: 200px; 
+    object-fit: cover; 
+  }
+  
+  .upcoming-anime-page .text-wrapper, .upcoming-anime-page .p, .upcoming-anime-page .genre-action-isekai {
+    text-align: center; 
+  }
+  
+  .upcoming-anime-page .save-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: auto; 
+  }
+  
