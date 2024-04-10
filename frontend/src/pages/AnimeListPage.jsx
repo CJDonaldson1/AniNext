@@ -9,7 +9,7 @@ export const AnimeListPage = () => {
         const fetchAnimes = async () => {
             try {
                 const { data } = await axios.get("http://localhost:3001/api/anime")
-                setAnimeList(data);
+                setAnimeList(data)
             } catch (error) {
                 console.error("Failed to fetch anime:", error)
             }
@@ -20,7 +20,7 @@ export const AnimeListPage = () => {
     const saveAnime = (anime) => {
         const savedAnimes = JSON.parse(localStorage.getItem("savedAnimes")) || []
         if (!savedAnimes.some(savedAnime => savedAnime.title === anime.title)) {
-            savedAnimes.push(anime);
+            savedAnimes.push(anime)
             localStorage.setItem("savedAnimes", JSON.stringify(savedAnimes))
         }
     }
