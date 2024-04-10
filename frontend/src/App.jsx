@@ -7,8 +7,7 @@ import ProfilePage from './pages/UserProfilePage'
 import ReviewsPage from './pages/ReviewFormPage'
 import UserLoginPage from './pages/UserLoginPage'
 import UserSignupPage from './pages/UserSignupPage'
-import Chatbot from 'react-chatbot-kit'
-import 'react-chatbot-kit/build/main.css'
+import Chatbot from '../Chatbot/config'
 
 function App() {
   return (
@@ -21,8 +20,8 @@ function App() {
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/login" element={<UserLoginPage />} />
         <Route path="/signup" element={<UserSignupPage />} />
-
       </Routes>
+      <Chatbot /> 
     </Router>
   )
 }
