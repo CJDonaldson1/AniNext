@@ -4,13 +4,20 @@ import "./NavBar.css"
 
 export const Navbar = () => {
   return (
-    <div className="navbar">
-      <span className="text-wrapper">A</span>
-      <span className="span">niNext</span>
-      <Link to="/" className="NavHomepage">HomePage</Link>
-      <Link to="/anime-list" className="NavUpcomingAnimes">Upcoming Anime</Link>
-      <Link to="/reviews" className="NavReview">Reviews</Link>
-      <Link to="/profile" className="NavProfile">Profile</Link>
+    <div className="box">
+      <div className="nav-bar-home">
+        <div className="nav-bar">
+          <p className="ani-next">
+            <span className="text-wrapper">A</span>
+            <span className="span">niNext</span>
+          </p>
+          {/* Convert divs to Link components for navigation */}
+          <Link to="/" className="div">HomePage</Link>
+          <Link to="/anime-list" className="text-wrapper-2">Upcoming Animes</Link>
+          <Link to="/reviews" className="text-wrapper-3">Reviews</Link>
+          <Link to="/profile" className="text-wrapper-4">Profile</Link>
+        </div>
+      </div>
     </div>
   )
 }

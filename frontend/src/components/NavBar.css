@@ -1,105 +1,88 @@
 .box {
-    height: 101px;
-    width: 1440px;
-  }
-  
-  .box .navbar {
-    background-color: #0c0a0a;
-    height: 101px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 2000px;
-  }
-  
-  .box .nav-bar {
-    height: 46px;
-    left: 44px;
-    position: relative;
-    top: 16px;
-    width: 1310px;
-  }
-  
-  .box .ani-next {
-    color: transparent;
-    font-family: "Inika-Bold", Helvetica;
-    font-size: 50px;
-    font-weight: 700;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-    white-space: nowrap;
-    width: 221px;
-  }
-  
-  .box .text-wrapper {
-    color: #fe0000;
-    top: -50px;
-    position: relative;
-  }
-  
-.box .span {
-    color: #ffffff;
-    font-size: 40px;
-    position: relative;
-    top: -52px;
+  height: 103px;
+  width: 1440px;
 }
-  
-  .box .NavHomepage{
-    color: #ffffff;
-    font-family: "Inika-Bold", Helvetica;
-    font-size: 30px;
-    font-weight: 700;
-    left: 265px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 12px;
-    white-space: nowrap;
-    width: 157px;
-  }
-  
-  .box .NavUpcomingAnimes{
-    color: #ffffff;
-    font-family: "Inika-Bold", Helvetica;
-    font-size: 30px;
-    font-weight: 700;
-    left: 494px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 11px;
-    white-space: nowrap;
-    width: 267px;
-  }
-  
-  .box .NavReview {
-    color: #ffffff;
-    font-family: "Inika-Bold", Helvetica;
-    font-size: 30px;
-    font-weight: 700;
-    left: 1143px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 12px;
-    white-space: nowrap;
-    width: 157px;
-  }
-  
-  .box .NavProfile {
-    color: #ffffff;
-    font-family: "Inika-Bold", Helvetica;
-    font-size: 30px;
-    font-weight: 700;
-    left: 873px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 12px;
-    white-space: nowrap;
-    width: 97px;
-  }
-  
+
+.box .nav-bar-home {
+  background-color: #0e0e0e;
+  height: 103px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 1440px;
+}
+
+.box .nav-bar {
+  height: 51px;
+  left: 23px;
+  position: relative;
+  top: 36px;
+  width: 1310px;
+}
+
+.box .text-wrapper {
+  color: #ffffff;
+  font-family: "Inika-Bold", Helvetica;
+  font-size: 40px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 221px;
+}
+
+.box .div {
+  color: #ffffff;
+  font-family: "Inika-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  left: 265px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 3px;
+  width: 157px;
+}
+
+.box .text-wrapper-2 {
+  -webkit-text-stroke: 1px #000000;
+  color: #ffffff;
+  font-family: "Inika-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  left: 500px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 1px;
+  width: 267px;
+}
+
+.box .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Inika-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  left: 1143px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 3px;
+  width: 157px;
+}
+
+.box .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Inika-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  left: 873px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 3px;
+  width: 97px;
+}
+

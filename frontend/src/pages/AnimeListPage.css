@@ -7,14 +7,7 @@
     padding: 20px;
 }
 
-.box {
-    height: 285px;
-    position: relative;
-    width: 449px;
-    margin-bottom: 20px; /* Provides spacing between rows */
-    background-color: #fff; /* Optional, if you want the boxes to have a distinct background */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional, adds shadow for better separation */
-}
+
 
 .box .image {
     height: 216px;
