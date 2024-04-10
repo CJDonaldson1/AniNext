@@ -1,0 +1,68 @@
+.profile-page {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .anime-card {
+    width: 300px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .anime-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .anime-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .anime-details {
+    padding: 15px;
+  }
+  
+  .anime-details h3, .anime-details p {
+    margin: 5px 0;
+  }
+  
+  .reminder-section {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .reminder-section input, .reminder-section button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .reminder-section button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .profile-page {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .anime-card {
+      width: 90%;
+    }
+  }
+  
+  
