@@ -3,38 +3,49 @@ import axios from 'axios'
 import './ReviewFormPage.css'
 
 const ReviewPage = () => {
-    const [animeTitle, setAnimeTitle] = useState('')
-    const [numberOfStars, setNumberOfStars] = useState(5)
-    const [comment, setComment] = useState('')
-    const [termsAccepted, setTermsAccepted] = useState(false)
+    const [selectedAnimeId, setSelectedAnimeId] = useState('')
+    const [rating, setRating] = useState(5)
+    const [content, setContent] = useState('')
     const [animes, setAnimes] = useState([])
+    const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        // Fetch reviews
-        axios.get('http://localhost:3001/api/reviews')
-            .then(response => {
-               
-                console.log(response.data);
-            })
-            .catch(error => console.error('Failed to fetch reviews:', error))
+        const fetchAnimes = async () => {
+            try {
+                const { data } = await axios.get('http://localhost:3001/api/anime')
+                setAnimes(data);
+                console.log('Animes:', data)
+            } catch (error) {
+                console.error('Failed to fetch animes:', error)
+            }
+        }
 
-        axios.get('http://localhost:3001/api/anime')
-            .then(response => {
-                setAnimes(response.data)
-            })
-            .catch(error => console.error('Failed to fetch animes:', error))
+        const fetchReviews = async () => {
+            try {
+                const { data } = await axios.get('http://localhost:3001/api/reviews')
+                setReviews(data);
+                console.log('Reviews:', data)
+            } catch (error) {
+                console.error('Failed to fetch reviews:', error)
+            }
+        };
+
+        fetchAnimes().then(fetchReviews)
     }, [])
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
-        const reviewData = { animeTitle, numberOfStars, comment, termsAccepted }
+        e.preventDefault();
+        const reviewData = { anime: selectedAnimeId, rating, content }
 
         try {
             await axios.post('http://localhost:3001/api/reviews', reviewData)
             alert('Review submitted successfully!')
-         
+            // Optionally reset form fields here
+            setContent('');
+            setRating(5);
+            setSelectedAnimeId('')
         } catch (error) {
-            console.error('Failed to submit review:', error)
+            console.error('Failed to submit review:', error);
             alert('Failed to submit the review, please try again.')
         }
     }
@@ -43,30 +54,29 @@ const ReviewPage = () => {
         <div className="review-page">
             <form onSubmit={handleSubmit} className="container">
                 <div className="title">Leave a Review</div>
-                <div className="description">Your feedback is important to us!</div>
                 
                 <div className="input text-wrapper">
                     <label htmlFor="animeTitle">Anime Title</label>
                     <select
                         id="animeTitle"
-                        value={animeTitle}
-                        onChange={(e) => setAnimeTitle(e.target.value)}
+                        value={selectedAnimeId}
+                        onChange={(e) => setSelectedAnimeId(e.target.value)}
                         required
                     >
                         <option value="">Select Anime</option>
-                        {animes.map((anime, index) => (
-                            <option key={index} value={anime.title}>{anime.title}</option>
+                        {animes.map((anime) => (
+                            <option key={anime._id} value={anime._id}>{anime.title}</option>
                         ))}
                     </select>
                 </div>
 
                 <div className="input-2 text-wrapper">
-                    <label htmlFor="numberOfStars">Number of Stars (1-5)</label>
+                    <label htmlFor="rating">Rating (1-5)</label>
                     <input
-                        id="numberOfStars"
+                        id="rating"
                         type="number"
-                        value={numberOfStars}
-                        onChange={(e) => setNumberOfStars(e.target.value)}
+                        value={rating}
+                        onChange={(e) => setRating(e.target.value)}
                         min="1"
                         max="5"
                         required
@@ -74,30 +84,38 @@ const ReviewPage = () => {
                 </div>
 
                 <div className="input-3 text-wrapper">
-                    <label htmlFor="comment">Comment</label>
+                    <label htmlFor="content">Review Content</label>
                     <textarea
-                        id="comment"
-                        value={comment}
-                        onChange={(e) => setComment(e.target.value)}
+                        id="content"
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
                         required
                     ></textarea>
                 </div>
 
-                <div className="checkbox text-wrapper">
-                    <input
-                        type="checkbox"
-                        checked={termsAccepted}
-                        onChange={(e) => setTermsAccepted(e.target.checked)}
-                    />
-                    <label>I accept the terms and conditions</label>
-                </div>
-
-                <button type="submit" className="submit-btn" disabled={!termsAccepted}>Submit Review</button>
+                <button type="submit" className="submit-btn">Submit Review</button>
             </form>
+
+            {/* Display reviews */}
+            <div className="reviews-container">
+                <h2>Reviews</h2>
+                {reviews.map((review) => (
+  <div key={review._id}>
+    <h3>{review.anime.title}</h3>
+    <p>Rating: {review.rating}</p>
+    <p>{review.content}</p>
+  </div>
+))}
+            </div>
         </div>
     )
 }
 
 export default ReviewPage
+
+
+
+
+
 
 

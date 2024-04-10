@@ -2,7 +2,7 @@ const Review = require('../models/review')
 
 exports.getAllReviews = async (req, res) => {
     try {
-        const reviews = await Review.find().populate('user').populate('anime')
+        const reviews = await Review.find().populate('anime')
         res.json(reviews)
     } catch (error) {
         res.status(500).send(error.message)
@@ -12,7 +12,7 @@ exports.getAllReviews = async (req, res) => {
 exports.getReviewById = async (req, res) => {
     try {
         const { id } = req.params;
-        const review = await Review.findById(id).populate('user').populate('anime')
+        const review = await Review.findById(id).populate('anime')
         if (review) {
             res.json(review)
         } else {
