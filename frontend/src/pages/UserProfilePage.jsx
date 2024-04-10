@@ -14,27 +14,49 @@ export const ProfilePage = () => {
   const handleSendReminders = async () => {
     if (!phoneNumber) {
       alert('Please enter your phone number.')
-      return
+      return;
     }
-    
-    // Construct a message with titles of saved animes
-    const message = savedAnimes.map(anime => anime.title).join(", ")
-    
-    if (!message) {
+  
+    // Check if there are saved animes to send reminders for
+    const savedAnimes = JSON.parse(localStorage.getItem("savedAnimes")) || []
+    if (savedAnimes.length === 0) {
       alert('There are no animes saved to send reminders for.')
-      return
+      return;
     }
-
+  
+    const today = new Date()
+  
+    const message = savedAnimes.map(anime => {
+      const airingDate = new Date(anime.airingDate)
+      let nextEpisodeDate
+  
+      if (today >= airingDate) {
+        const weeksSinceAiring = Math.floor((today - airingDate) / (7 * 24 * 60 * 60 * 1000));
+        nextEpisodeDate = new Date(airingDate.setDate(airingDate.getDate() + 7 * (weeksSinceAiring + 1)))
+      } else {
+        nextEpisodeDate = airingDate;
+      }
+  
+      const nextEpisodeDateFormatted = nextEpisodeDate.toLocaleDateString('en-US', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+      })
+  
+      return `${anime.title} - Next episode airs on: ${nextEpisodeDateFormatted}`
+    }).join("\n")
+  
     try {
-      await axios.post('http://localhost:3001/api/reminders', { savedAnimes, phoneNumber, message })
+      await axios.post('http://localhost:3001/api/reminders', { phoneNumber, message })
       alert('Reminders set successfully!')
       localStorage.removeItem("savedAnimes")
       setSavedAnimes([])
     } catch (error) {
-      console.error('Failed to set reminders:', error);
+      console.error('Failed to set reminders:', error)
       alert('Failed to set reminders. Please try again.')
     }
   }
+  
+  
+  
 
   return (
     <div className="profile-page">
