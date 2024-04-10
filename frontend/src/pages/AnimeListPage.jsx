@@ -13,7 +13,7 @@ export const AnimeListPage = () => {
             } catch (error) {
                 console.error("Failed to fetch anime:", error)
             }
-        };
+        }
         fetchAnimes()
     }, [])
 
