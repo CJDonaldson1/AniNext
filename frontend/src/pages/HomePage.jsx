@@ -34,30 +34,37 @@ const HomePage = () => {
     setCurrentAnimeIndex(nextIndex)
   }
   return (
-    <div className="homepage">
-      <div className="anime-display">
-        <div className="anime-info">
-          <img className="anime-background" alt="Anime background" src={currentAnime.image} />
-          <div className="anime-details">
-            <p className="anime-title">{currentAnime.title}</p>
-            <div className="anime-metadata">
-              <span className="season">{`Season ${currentAnime.season}`}</span>
-              <span className="year">{currentAnime.airingDate.split("-")[0]}</span>
-            </div>
-            <p className="season-description">{currentAnime.synopsis}</p>
-            <button className="save-to-list" onClick={() => console.log("Save to List Clicked")}>Save to List</button>
-            <p className="new-episodes-release">New Episodes Air on {currentAnime.airingDate}</p>
+      <div className="homepage">
+          <div className="group-wrapper">
+              <div className="group">
+              <div className="overlap" style={{ backgroundImage: `url(${currentAnime?.image})` }}>
+                      
+                      <p className="anime-title">{currentAnime?.title}</p>
+                      <div className="season">{currentAnime?.studio}</div>
+                      <div className="year">{new Date(currentAnime?.airingDate).getFullYear()}</div>
+                      <div className="div-wrapper">
+                          {/* Assuming first genre is displayed; adjust if necessary */}
+                          <div className="div">{currentAnime?.genres?.[0]}</div>
+                      </div>
+                      <p className="season-description">{currentAnime?.synopsis}</p>
+                      <div className="overlap-group-wrapper">
+                          <div className="overlap-group-2" onClick={() => saveAnime(currentAnime)}>
+                              <div className="text-wrapper-2">Save to List</div>
+                          </div>
+                      </div>
+                      <p className="new-episodes-release">New Episodes Air on Sundays at 1pm est</p>
+                  </div>
+                  <div className="overlap-2">
+                      {/* Adjusting to match the CSS class names for each image */}
+                      {animeList.slice(currentAnimeIndex + 1, currentAnimeIndex + 5).map((anime, index) => (
+                          <img key={index} className={`image-${index + 1}`} alt={`Next Anime ${index + 1}`} src={anime.image} />
+                      ))}
+                      <div className="text-wrapper-3">NEXT ANIME</div>
+                      <button className="vector" onClick={handleNextAnime}>Next Anime</button>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div className="next-anime-preview">
-          <p className="text-next">NEXT ANIME</p>
-          {animeList.slice(currentAnimeIndex + 1, currentAnimeIndex + 6).map((anime, index) => (
-            <img key={index} className="next-anime-img" alt={`${anime.title} preview`} src={anime.image} />
-          ))}
-          <button className="next-anime-button" onClick={handleNextAnime}>Next Anime</button>
-        </div>
       </div>
-    </div>
   );
 };
 

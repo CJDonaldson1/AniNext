@@ -1,18 +1,18 @@
-.box {
+.navbar-container {
   height: 103px;
   width: 1440px;
 }
 
-.box .nav-bar-home {
+.navbar-container .nav-bar-home {
   background-color: #0e0e0e;
-  height: 103px;
+  height: 113px;
   left: 0;
   position: fixed;
   top: 0;
-  width: 1440px;
+  width: 1560px;
 }
 
-.box .nav-bar {
+.navbar-container .nav-bar {
   height: 51px;
   left: 23px;
   position: relative;
@@ -20,7 +20,7 @@
   width: 1310px;
 }
 
-.box .text-wrapper {
+.navbar-container .text-wrapper {
   color: #ffffff;
   font-family: "Inika-Bold", Helvetica;
   font-size: 40px;
@@ -33,7 +33,7 @@
   width: 221px;
 }
 
-.box .div {
+.navbar-container .div {
   color: #ffffff;
   font-family: "Inika-Bold", Helvetica;
   font-size: 30px;
@@ -46,7 +46,7 @@
   width: 157px;
 }
 
-.box .text-wrapper-2 {
+.navbar-container .text-wrapper-2 {
   -webkit-text-stroke: 1px #000000;
   color: #ffffff;
   font-family: "Inika-Bold", Helvetica;
@@ -60,7 +60,7 @@
   width: 267px;
 }
 
-.box .text-wrapper-3 {
+.navbar-container .text-wrapper-3 {
   color: #ffffff;
   font-family: "Inika-Bold", Helvetica;
   font-size: 30px;
@@ -73,7 +73,7 @@
   width: 157px;
 }
 
-.box .text-wrapper-4 {
+.navbar-container .text-wrapper-4 {
   color: #ffffff;
   font-family: "Inika-Bold", Helvetica;
   font-size: 30px;
@@ -85,4 +85,5 @@
   top: 3px;
   width: 97px;
 }
+
 
