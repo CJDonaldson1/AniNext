@@ -1,89 +1,72 @@
+/* Base styles */
 .navbar-container {
-  height: 103px;
-  width: 1440px;
-}
-
-.navbar-container .nav-bar-home {
   background-color: #0e0e0e;
-  height: 113px;
-  left: 0;
+  width: 100%; /* Full width */
   position: fixed;
   top: 0;
-  width: 1560px;
+  z-index: 1000; /* Make sure navbar is on top */
 }
 
 .navbar-container .nav-bar {
-  height: 51px;
-  left: 23px;
-  position: relative;
-  top: 36px;
-  width: 1310px;
+  display: flex;
+  justify-content: space-between; /* Distribute space between menu items */
+  align-items: center;
+  padding: 0 1rem; /* Add padding on small screens */
+  height: 103px;
 }
 
-.navbar-container .text-wrapper {
-  color: #ffffff;
-  font-family: "Inika-Bold", Helvetica;
-  font-size: 40px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 0;
-  width: 221px;
-}
-
-.navbar-container .div {
-  color: #ffffff;
-  font-family: "Inika-Bold", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  left: 265px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 3px;
-  width: 157px;
-}
-
-.navbar-container .text-wrapper-2 {
-  -webkit-text-stroke: 1px #000000;
-  color: #ffffff;
-  font-family: "Inika-Bold", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  left: 500px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 1px;
-  width: 267px;
-}
-
-.navbar-container .text-wrapper-3 {
-  color: #ffffff;
-  font-family: "Inika-Bold", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  left: 1143px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 3px;
-  width: 157px;
-}
-
+.navbar-container .text-wrapper,
+.navbar-container .div,
+.navbar-container .text-wrapper-2,
+.navbar-container .text-wrapper-3,
 .navbar-container .text-wrapper-4 {
   color: #ffffff;
   font-family: "Inika-Bold", Helvetica;
-  font-size: 30px;
+  font-size: 1.25rem; /* Start with a smaller base font size */
   font-weight: 700;
-  left: 873px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 3px;
-  width: 97px;
+  margin: 0 0.5rem; /* Add some margin between items */
+}
+
+/* Use rem for font sizes to scale with user's browser settings */
+.navbar-container .text-wrapper { font-size: 2.5rem; }
+.navbar-container .div,
+.navbar-container .text-wrapper-2,
+.navbar-container .text-wrapper-3,
+.navbar-container .text-wrapper-4 { font-size: 1.875rem; }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Adjust font sizes and padding for tablet */
+  .navbar-container .text-wrapper { font-size: 2rem; }
+  .navbar-container .div,
+  .navbar-container .text-wrapper-2,
+  .navbar-container .text-wrapper-3,
+  .navbar-container .text-wrapper-4 { font-size: 1.5rem; }
+  .navbar-container .nav-bar { padding: 0 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  /* Stack navbar items vertically on mobile */
+  .navbar-container .nav-bar {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .navbar-container .text-wrapper,
+  .navbar-container .div,
+  .navbar-container .text-wrapper-2,
+  .navbar-container .text-wrapper-3,
+  .navbar-container .text-wrapper-4 {
+    margin: 0.25rem 0; /* Reduce margin for a tighter fit */
+    text-align: center; /* Center-align text */
+    width: 100%; /* Full width */
+  }
+  .navbar-container .text-wrapper { font-size: 1.75rem; }
+  .navbar-container .div,
+  .navbar-container .text-wrapper-2,
+  .navbar-container .text-wrapper-3,
+  .navbar-container .text-wrapper-4 { font-size: 1.25rem; }
 }
 
 
