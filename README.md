@@ -44,5 +44,7 @@ https://youtu.be/J2burW1x2eg?si=lgaPcF1sFGr4WAZ5 video to help with twilio
 https://www.youtube.com/watch?v=w3vs4a03y3I helped find backend problem 
 https://stackoverflow.com/questions/10599148/how-do-i-get-the-current-time-only-in-javascript helped with time 
 https://stackoverflow.blog/2022/03/02/twilio-launches-collective-on-stack-overflow/
+https://medium.com/@utkarsh.gupta0311/secure-user-authentication-with-jwt-bcrypt-and-node-js-78c7bb2d86a1
+
 
 
