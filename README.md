@@ -35,9 +35,14 @@ AniNext is a web application designed for anime enthusiasts looking forward to u
 ![Screen Shot 2024-04-02 at 9 40 22 AM](https://github.com/whoever11/AniNext/assets/148389997/0c98e844-c174-479e-9b4f-72faefcfee48)
 ![Screen Shot 2024-04-02 at 9 40 16 AM](https://github.com/whoever11/AniNext/assets/148389997/eff0d43d-0ba5-42cd-8b5c-687272e64f5d)
 
-## Goals
+## Resources
+https://console.twilio.com/us1/develop/phone-numbers/manage/incoming for the sms messaging
 
-# My goals are to use Oauth for authentication and to focus on taking more time on my design, just trying to use what we have learned to have fun and making something cool
+https://fredrikoseberg.github.io/react-chatbot-kit-docs/docs/getting-started/ chatbot attempt that did not work
+https://youtu.be/J2burW1x2eg?si=lgaPcF1sFGr4WAZ5 video to help with twilio
 
+https://www.youtube.com/watch?v=w3vs4a03y3I helped find backend problem 
+https://stackoverflow.com/questions/10599148/how-do-i-get-the-current-time-only-in-javascript helped with time 
+https://stackoverflow.blog/2022/03/02/twilio-launches-collective-on-stack-overflow/
 
 
