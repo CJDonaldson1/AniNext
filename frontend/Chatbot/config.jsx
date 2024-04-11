@@ -31,6 +31,7 @@ const ChatbotComponent = () => {
       localStorage.setItem("savedAnimes", JSON.stringify(savedAnimes))
     }
   }
+  
 
   return (
     <div>
