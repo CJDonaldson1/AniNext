@@ -4,11 +4,11 @@ import "./UserProfilePage.css"
 
 export const ProfilePage = () => {
   const [savedAnimes, setSavedAnimes] = useState(JSON.parse(localStorage.getItem("savedAnimes")) || [])
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("")
 
   // Function to calculate the next episode date
   const getNextEpisodeDate = (anime) => {
-    const today = new Date();
+    const today = new Date()
     const airingDate = new Date(anime.airingDate)
     let nextEpisodeDate
 
@@ -16,14 +16,14 @@ export const ProfilePage = () => {
       const weeksSinceAiring = Math.floor((today - airingDate) / (7 * 24 * 60 * 60 * 1000))
       nextEpisodeDate = new Date(airingDate.setDate(airingDate.getDate() + 7 * (weeksSinceAiring + 1)))
     } else {
-      nextEpisodeDate = airingDate;
+      nextEpisodeDate = airingDate
     }
 
     return nextEpisodeDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
   }
   const handleRemoveAnime = (animeToRemove) => {
     const updatedSavedAnimes = savedAnimes.filter(anime => anime.title !== animeToRemove.title)
-    setSavedAnimes(updatedSavedAnimes);
+    setSavedAnimes(updatedSavedAnimes)
     localStorage.setItem("savedAnimes", JSON.stringify(updatedSavedAnimes))
   }
 
@@ -35,7 +35,7 @@ export const ProfilePage = () => {
 
     const reminders = savedAnimes.map(anime => {
       return `${anime.title} - Next episode airs on: ${getNextEpisodeDate(anime)}`
-    }).join('\n');
+    }).join('\n')
 
     try {
       const response = await axios.post('http://localhost:3001/api/reminders', {

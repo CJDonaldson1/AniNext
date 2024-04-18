@@ -4,7 +4,7 @@ const InputForm = ({ onSend }) => {
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value)
-  };
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()

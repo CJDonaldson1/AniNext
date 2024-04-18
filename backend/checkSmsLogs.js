@@ -5,7 +5,7 @@ const mongoURI = 'mongodb://127.0.0.1:27017/AnimeProjectDatabase'
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error(err));
+  .catch(err => console.error(err))
 const printLogs = async () => {
   try {
     const logs = await SmsLog.find()
